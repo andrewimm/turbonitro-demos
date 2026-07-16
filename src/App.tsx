@@ -70,6 +70,7 @@ export function App() {
       >
         <input
           type="url"
+          name="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://example.com"

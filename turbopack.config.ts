@@ -11,4 +11,10 @@ export default defineConfig({
     // Nitro serves this built frontend AND /api from a single origin.
     proxy: { '/api': 'http://localhost:3001' },
   },
+  build: {
+    // SSG: prerender each route to HTML at build time via src/entry-server.tsx's
+    // render(url); src/entry-client.tsx hydrates it. dev still serves client-side.
+    output: 'static',
+    prerender: ['/'],
+  },
 })

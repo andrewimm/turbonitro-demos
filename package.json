@@ -2,7 +2,6 @@
   "name": "turbonitro",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev:web": "turbopack dev",
     "dev:api": "nitro dev --port 3001",
