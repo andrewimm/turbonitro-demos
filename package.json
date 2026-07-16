@@ -1,0 +1,24 @@
+{
+  "name": "turbonitro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:web": "turbopack dev",
+    "dev:api": "nitro dev --port 3001",
+    "dev": "concurrently -k -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
+    "build:web": "turbopack build",
+    "build": "npm run build:web && nitro build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9",
+    "nitropack": "^2",
+    "react-refresh": "^0.14.0",
+    "turbopack": "file:../../../github/next.js/packages/turbopack/turbopack-0.1.0.tgz"
+  }
+}
